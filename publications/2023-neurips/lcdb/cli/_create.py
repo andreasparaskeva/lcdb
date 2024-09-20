@@ -28,12 +28,14 @@ def add_subparser(subparsers):
     subparser.add_argument(
         "-v", "--verbose", action="store_true", default=False, required=False
     )
+
     subparser.add_argument("-s", "--seed", type=int, required=False, default=0)
 
     subparser.set_defaults(func=function_to_call)
 
 
 def main(
+
     workflow_class,
     num_configs,
     output_file,
@@ -87,6 +89,7 @@ def main(
 
     pd.DataFrame(configs, columns=skopt_space.dimension_names).to_csv(
         output_file, index=False
+
     )
 
     if verbose:

@@ -3,6 +3,7 @@
 import logging
 import os
 
+
 # Avoid Tensorflow Warnings
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = str(3)
 
